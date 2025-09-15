@@ -17,13 +17,13 @@ function Twowaybind(){
     const handleChange5 = (e) =>{setMail(e.target.value)}
     const[empid, setEmpid] = useState("");
     const handleChange6 = (e) =>{setEmpid(e.target.value)}
-    const[pic, setPic] = useState(""); // This will hold the image URL
+    const[pic, setPic] = useState(""); 
     const handleChange7 = (e) => {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setPic(reader.result); // Set image URL
+                setPic(reader.result); 
             };
             reader.readAsDataURL(file);
         }
@@ -122,5 +122,6 @@ function Twowaybind(){
         </>
     )
 }
+
 
 export default Twowaybind;
